@@ -1,0 +1,40 @@
+<section class="steps">
+  <div class="row wrapper">
+    <div class="col-lg-8">
+      <div class="container-sm">
+        <div class="steps__col">
+          <h3 class="steps__title">Choose how you wish to be a part?</h3>
+          <div class="steps__btn" (click)="success.openPopup()">
+            <div class="steps__btn--data">
+              <i class="steps__btn--icon"><img src="assets/img/icon_08.png"></i>
+              <span class="steps__btn--text">Need internship with Alpha Chaperone</span>
+            </div>
+            <span class="steps__btn--link"><i class='bx bx-right-arrow-alt'></i></span>
+          </div>
+          <div class="steps__btn" routerLink="/training-registration">
+            <div class="steps__btn--data">
+              <i class="steps__btn--icon"><img src="assets/img/icon_09.png"></i>
+              <span class="steps__btn--text">Need to be trained with Alpha Chaperone</span>
+            </div>
+            <span class="steps__btn--link"><i class='bx bx-right-arrow-alt'></i></span>
+          </div>
+          <div class="steps__btn" (click)="success.openPopup()">
+            <div class="steps__btn--data">
+              <i class="steps__btn--icon"><img src="assets/img/icon_07.png"></i>
+              <span class="steps__btn--text">Enroll for Trainer Empanelment Program</span>
+            </div>
+            <span class="steps__btn--link"><i class='bx bx-right-arrow-alt'></i></span>
+          </div>
+          <div class="text-center mt-2">
+            <a routerLink="/home" class="back-btn"><i class='bx bx-arrow-back mr-1'></i>Back to Home</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="steps__col small">
+        <i class="steps__img"><img src="assets/img/img_05.svg"></i>
+      </div>
+    </div>
+  </div>
+</section>

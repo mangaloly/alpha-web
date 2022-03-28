@@ -1,0 +1,220 @@
+.overview {
+  padding-bottom: 120px;
+  background-color: var(--white);
+  position: relative;
+  @media(max-width: 992px) {
+    padding-bottom: 50px;
+  }
+
+  &__title {
+    display: block;
+    font-size: 94px;
+    font-family: GilroySemi !important;
+    color: var(--textDark);
+    margin-bottom: 50px;
+    @media(max-width: 1600px) {
+      font-size: 74px;
+    }
+    @media(max-width: 992px) {
+      font-size: 36px;
+    }
+  }
+}
+
+.values {
+  position: relative;
+  padding-bottom: 100px;
+  background-color: var(--white);
+  @media(max-width: 992px) {
+    padding-bottom: 50px;
+  }
+
+  &__row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  &__col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1 0 18.1%;
+    margin: 0 15px;
+    background-color: var(--white);
+    overflow: hidden;
+    border-radius: 80px 0 80px 0;
+    padding: 40px;
+    box-shadow: 6px 6px 53px 0 rgba($color: #888EA4, $alpha: 0.15);
+    @media(max-width: 1600px) {
+      padding: 30px;
+    }
+    @media(max-width: 1400px) {
+      flex: 1 0 17.8%;
+    }
+    @media(max-width: 992px) {
+      width: 100%;
+      margin: 0 0 30px;
+      flex: none;
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__img {
+    display: block;
+    width: 180px;
+    height: 180px;
+    overflow: hidden;
+    margin-bottom: 50px;
+    @media(max-width: 1600px) {
+      margin-bottom: 20px;
+    }
+    @media(max-width: 1400px) {
+      width: 170px;
+      height: 150px;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__title {
+    display: block;
+    text-align: center;
+    font-size: 28px;
+    color: var(--textDark);
+    font-family: GilroyNormal !important;
+    @media(max-width: 1600px) {
+      font-size: 24px;
+    }
+
+    &::first-letter {
+      font-family: GilroyBold !important;
+      color: var(--primary);
+    }
+
+  }
+}
+
+.team {
+  position: relative;
+  padding: 100px 0;
+  background-color: var(--bgColor1);
+  overflow: hidden;
+  @media(max-width: 992px) {
+    padding: 50px 0;
+  }
+  &::before {
+    content: '';
+    width: 860px;
+    height: 580px;
+    background-image: url(/assets/img/pattern.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    @media(max-width: 1600px) {
+      width: 690px;
+      height: 470px;
+    }
+    @media(max-width: 992px) {
+      display: none;
+    }
+  }
+
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+
+  &__slider {
+    .owl-nav {
+      position: absolute;
+      right: 0;
+      top: -100px;
+
+      .owl-prev, .owl-next {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 70px;
+        height: 70px;
+        border-radius: 15px 0 15px 0;
+        font-size: 20px;
+      }
+    }
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 70px 0 70px 0;
+    box-shadow: 6px 6px 53px 0 rgba($color: #888EA4, $alpha: 0.25);
+    margin-bottom: 30px;
+    @media(max-width: 1600px) {
+      height: 380px;
+    }
+    @media(max-width: 1400px) {
+      height: 350px;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__name {
+    display: flex;
+    align-items: center;
+    font-size: 34px;
+    font-family: GilroySemi !important;
+    color: var(--textDark);
+    margin-bottom: 5px;
+    @media(max-width: 1600px) {
+      font-size: 26px;
+    }
+    @media(max-width: 1400px) {
+      font-size: 24px;
+    }
+    @media(max-width: 992px) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__desg {
+    font-size: 20px;
+    color: var(--primary);
+    font-family: GilroySemi !important;
+    margin-left: 15px;
+    @media(max-width: 1600px) {
+      font-size: 16px;
+    }
+    @media(max-width: 992px) {
+      margin: 10px 0 5px;
+    }
+  }
+
+  &__edu {
+    display: block;
+    font-size: 18px;
+    color: var(--textLight);
+    @media(max-width: 1600px) {
+      font-size: 14px;
+    }
+  }
+}

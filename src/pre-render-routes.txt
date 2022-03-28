@@ -1,0 +1,11 @@
+/
+/about
+/contact
+/internship
+/training
+/trainer-empanelment
+/registration
+/intern-registration
+/training-registration
+/empanel-registration
+/privacy-policy

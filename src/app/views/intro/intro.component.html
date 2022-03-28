@@ -1,0 +1,13 @@
+<section class="intro">
+  <div class="intro__video">
+    <video preload="auto" id="intro_video">
+      <source src="assets/intro.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="intro__launch" [ngClass]="{ 'hide':is_hide }">
+    <button type="button" class="intro__launch--btn" (click)="startIntro()">
+      <span>Launch</span>
+      <span>Let's Go</span>
+    </button>
+  </div>
+</section>

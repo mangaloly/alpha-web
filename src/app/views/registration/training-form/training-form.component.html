@@ -1,0 +1,93 @@
+<section class="steps">
+  <div class="row wrapper">
+    <div class="col-lg-8">
+      <div class="container-sm">
+        <div class="steps__col">
+          <h3 class="steps__title">Tell us a little about you</h3>
+          <form class="steps__form" [formGroup]="trainingForm" (ngSubmit)="registerTraining()">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>Full Name</label>
+                  <input type="text" class="form-input" placeholder="Full Name" formControlName="fname" [ngClass]="{ 'is-invalid': trainingForm.controls['fname'].invalid && (trainingForm.controls['fname'].dirty || trainingForm.controls['fname'].touched) }">
+                  <span class="form-error" *ngIf="trainingForm.controls['fname'].invalid && (trainingForm.controls['fname'].dirty || trainingForm.controls['fname'].touched)">Name is required</span>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="email">Email Address</label>
+                  <input type="email" id="email" class="form-input" placeholder="Email Address" formControlName="email" [ngClass]="{ 'is-invalid': trainingForm.controls['email'].invalid && (trainingForm.controls['email'].dirty || trainingForm.controls['email'].touched) }">
+                  <span class="form-error" *ngIf="trainingForm.controls['email'].invalid && (trainingForm.controls['email'].dirty || trainingForm.controls['email'].touched)">Enter a valid email address</span>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="phone">Phone Number</label>
+                  <input type="tel" id="phone" class="form-input" placeholder="Phone Number" formControlName="phone" [ngClass]="{ 'is-invalid': trainingForm.controls['phone'].invalid && (trainingForm.controls['phone'].dirty || trainingForm.controls['phone'].touched) }">
+                  <span class="form-error" *ngIf="trainingForm.controls['phone'].invalid && (trainingForm.controls['phone'].dirty || trainingForm.controls['phone'].touched)">Enter a valid phone number</span>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="institute">Educational Institution</label>
+                  <input type="text" class="form-input" placeholder="Educational Institution" formControlName="institute" [ngClass]="{ 'is-invalid': trainingForm.controls['institute'].invalid && (trainingForm.controls['institute'].dirty || trainingForm.controls['institute'].touched) }">
+                  <span class="form-error" *ngIf="trainingForm.controls['institute'].invalid && (trainingForm.controls['institute'].dirty || trainingForm.controls['institute'].touched)">*Required</span>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="course">Course</label>
+                  <input type="text" class="form-input" placeholder="Course" formControlName="course" [ngClass]="{ 'is-invalid': trainingForm.controls['course'].invalid && (trainingForm.controls['course'].dirty || trainingForm.controls['course'].touched) }">
+                  <span class="form-error" *ngIf="trainingForm.controls['course'].invalid && (trainingForm.controls['course'].dirty || trainingForm.controls['course'].touched)">*Required</span>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>Were you associted with any training earlier</label>
+                  <select class="form-select" formControlName="earlier" [(ngModel)]="selectedExp" [ngClass]="{ 'is-invalid': trainingForm.controls['earlier'].invalid && (trainingForm.controls['earlier'].dirty || trainingForm.controls['earlier'].touched) }">
+                    <option disabled selected value="undefined">Choose an option</option>
+                    <option *ngFor="let option of earlier; let x = index;" [value]="option.id">{{ option.name }}</option>
+                  </select>
+                  <span class="form-error" *ngIf="trainingForm.controls['earlier'].invalid && (trainingForm.controls['earlier'].dirty || trainingForm.controls['earlier'].touched)">*Required</span>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>Where did you get to know about us?</label>
+                  <select class="form-select" formControlName="known" [(ngModel)]="selectedKnown" [ngClass]="{ 'is-invalid': trainingForm.controls['known'].invalid && (trainingForm.controls['known'].dirty || trainingForm.controls['known'].touched) }">
+                    <option disabled selected value="undefined">Choose an option</option>
+                    <option *ngFor="let option of known; let x = index;" [value]="option.id">{{ option.name }}</option>
+                  </select>
+                  <span class="form-error" *ngIf="trainingForm.controls['known'].invalid && (trainingForm.controls['known'].dirty || trainingForm.controls['known'].touched)">*Required</span>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>Type of training required</label>
+                  <select class="form-select" formControlName="category" [(ngModel)]="selectedCat" [ngClass]="{ 'is-invalid': trainingForm.controls['category'].invalid && (trainingForm.controls['category'].dirty || trainingForm.controls['category'].touched) }">
+                    <option disabled selected value="undefined">Choose an option</option>
+                    <option *ngFor="let option of category; let x = index;" [value]="option.id">{{ option.name }}</option>
+                  </select>
+                  <span class="form-error" *ngIf="trainingForm.controls['category'].invalid && (trainingForm.controls['category'].dirty || trainingForm.controls['category'].touched)">*Required</span>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-row">
+                  <button type="submit" class="submit-btn" [disabled]="!trainingForm.valid" (click)="success.openDialog()">Join Now</button>
+                  <a class="back-btn" routerLink="/home">Cancel</a>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="steps__col small">
+        <i class="steps__img"><img src="assets/img/img_05.svg"></i>
+      </div>
+    </div>
+  </div>
+</section>

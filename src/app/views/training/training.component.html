@@ -1,0 +1,43 @@
+<section class="page-banner">
+  <div class="container text-center">
+    <span class="page-name">Alpha Chaperone</span>
+    <h1 class="page-title">Training Program</h1>
+    <i class="page-img"><img src="assets/img/page-banner.jpg"></i>
+  </div>
+</section>
+
+<section class="overview-cmn">
+  <div class="container">
+    <p class="section-text lg text-dark text-justify">Alpha Chaperone offers a wide range of training programmes, independently as well as associated with the internship programmes. Interns can customise their internship package by choosing the training they require. The Training Programmes offered are:</p>
+  </div>
+</section>
+
+<section class="programs">
+  <div class="container">
+    <div class="row custom programs__row" *ngFor="let program of programs">
+      <div class="col-lg-7">
+        <i class="programs__img"><img src="{{program.src}}" alt="{{program.title}}"></i>
+      </div>
+      <div class="col-lg-5">
+        <h3 class="programs__title"><span>{{program.num}}.</span>{{program.title}}</h3>
+        <div class="programs__description" [innerHtml]="program.description"></div>
+        <a href="{{program.link}}" class="programs__btn"><span>Read More</span> <i class='bx bx-right-arrow-alt' ></i></a>
+        <span class="programs__num">{{program.num}}</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="accordian">
+  <div class="container">
+    <h4 class="section-title mb-6 text-center">Frequently Asked Questions</h4>
+    <mat-accordion>
+      <mat-expansion-panel class="accordian__item" *ngFor="let item of trainingfaq; let isFirst = first" [expanded]="isFirst">
+        <mat-expansion-panel-header>
+          <mat-panel-title class="accordian__title"><span>{{item.num}}.</span>{{item.title}}</mat-panel-title>
+        </mat-expansion-panel-header>
+        <p class="accordian__text">{{item.description}}</p>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
+</section>

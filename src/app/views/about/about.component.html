@@ -1,0 +1,103 @@
+<section class="page-banner">
+  <div class="container text-center">
+    <span class="page-name">About Alpha Chaperone</span>
+    <h1 class="page-title">Fostering the Finest</h1>
+    <i class="page-img"><img src="assets/img/page-banner.jpg"></i>
+  </div>
+</section>
+
+<section class="overview">
+  <div class="container">
+    <h2 class="overview__title">We help our students grow to unleash their potential.</h2>
+    <div class="row custom">
+      <div class="col-lg-6">
+        <span class="section-meta edit">Who we are?</span>
+        <p class="section-text text-semi text-justify">Alpha Chaperone is a group of highly motivated Social Workers, who aims to redefine the standards of the profession through monitored internship programmes and quality training sessions.</p>
+        <p class="section-text text-semi text-justify">As the name suggests, We identify ourselves as Chaperones; a person who accompanies and looks after another person or group of people. And we are prime of our kind in the domain of social work. Hence we chose the name ‘Alpha Chaperone’. We focus on providing tailored internship experiences with specifically designed tasks and monitoring patterns and equip social workers with a set of professional skills and attitudes through training and workshops to mould themself as better professionals and persons which will help them to contribute to every area they touch.</p>
+      </div>
+      <div class="col-lg-6">
+        <span class="section-meta edit">Our Vision</span>
+        <p class="section-text lg mb-5">“To enhance the quality of professional Social Work practises, by moulding the budding professionals.”</p>
+        <span class="section-meta edit">Our Mission</span>
+        <ul class="section-list lg">
+          <li>To ensure the quality of internships through specifically designed tasks and monitoring patterns, that helps to enhance the productivity and learnings of the Social Work trainees.</li>
+          <li>To deliver standard Training sessions with relevant and updated content, to equip the social work trainees with professional skill sets and mindset.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="values">
+  <div class="container">
+    <span class="section-meta edit mb-5">Our Values</span>
+    <div class="values__row">
+      <div class="values__col">
+        <i class="values__img"><img src="assets/img/value_01.svg"></i>
+        <span class="values__title">Analytical</span>
+      </div>
+      <div class="values__col">
+        <i class="values__img"><img src="assets/img/value_02.svg"></i>
+        <span class="values__title">Learning</span>
+      </div>
+      <div class="values__col">
+        <i class="values__img"><img src="assets/img/value_03.svg"></i>
+        <span class="values__title">Passion</span>
+      </div>
+      <div class="values__col">
+        <i class="values__img"><img src="assets/img/value_04.svg"></i>
+        <span class="values__title">Humanitarian</span>
+      </div>
+      <div class="values__col">
+        <i class="values__img"><img src="assets/img/value_05.svg"></i>
+        <span class="values__title">Accountable</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="team">
+  <div class="container">
+    <span class="section-meta">Team</span>
+    <h4 class="section-title mb-6">The Chaperones</h4>
+    <div class="team__slider">
+      <owl-carousel-o [options]="teamSlider">
+        <ng-template carouselSlide *ngFor="let member of team">
+          <div class="team__col">
+            <i class="team__img"><img [src]="member.img" [alt]="member.name"></i>
+            <h4 class="team__name">{{member.name}} <span class="team__desg">{{member.desg}}</span></h4>
+            <span class="team__edu">{{member.edu}}</span>
+          </div>
+        </ng-template>
+      </owl-carousel-o>
+    </div>
+  </div>
+</section>
+
+<section class="home-associate">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3 text-center">
+        <i class="associate-logo"><img src="assets/img/logo_04.svg"></i>
+      </div>
+      <div class="col-lg-3 text-center">
+        <i class="associate-logo"><img src="assets/img/logo_02.svg"></i>
+      </div>
+      <div class="col-lg-3 text-center">
+        <i class="associate-logo"><img src="assets/img/logo_03.svg"></i>
+      </div>
+      <div class="col-lg-3 text-center">
+        <i class="associate-logo"><img src="assets/img/logo_04.svg"></i>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="mockup">
+  <div class="container">
+    <div class="mockup__box">
+      <h3 class="mockup__title">Are you ready to be a part of <br>Alpha Chaperone ?</h3>
+        <a href="#" class="mockup__btn"><span>Become a member</span></a>
+    </div>
+  </div>
+</section>

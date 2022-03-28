@@ -1,0 +1,175 @@
+<section class="banner">
+  <div class="banner__image"><img src="assets/img/banner-image.jpg" alt="Alpha Chaperone"></div>
+  <div class="banner__image mobile"><img src="assets/img/mobile-banner.jpg" alt="Alpha Chaperone"></div>
+  <div class="banner__content">
+    <h1 class="banner__mega">We are</h1>
+    <h2 class="banner__title">Alpha Chaperone</h2>
+    <span class="banner__sub">fostering the finest</span>
+  </div>
+  <div class="banner__content mobile">
+    <h2 class="banner__title">We are Alpha Chaperone</h2>
+    <span class="banner__sub">We aim to redefine the standards of the profession through monitored internship programmes and quality assured training sessions.</span>
+    <a routerLink="/registration" class="banner__btn">Become a Member</a>
+  </div>
+</section>
+
+<section class="home-about">
+  <div class="container">
+      <span class="section-meta">Who We Are</span>
+      <h3 class="section-title mb-6">We are a group of highly<br> motivated Social Workers!</h3>
+      <div class="row align-items-center custom">
+        <div class="col-lg-6">
+          <div class="home-about__img"><img src="assets/img/img_01.png"></div>
+        </div>
+        <div class="col-lg-6">
+          <p class="section-text">We aim to redefine the standards of the profession through monitored internship programmes and quality assured training sessions.</p>
+          <p class="section-text">As the name suggests, We identify ourselves as Chaperones; a person who accompanies and looks after another person or group of people. And we are prime of our kind in the domain of social work. Hence we chose the name ‘Alpha Chaperone’.</p>
+          <ul class="section-list mg-5">
+            <li>Quality assured training & Services</li>
+            <li>Expert team members</li>
+            <li>State of the art Internship monitoring</li>
+          </ul>
+          <a routerLink="/about" class="section-btn"><span>More about us</span></a>
+        </div>
+      </div>
+  </div>
+</section>
+
+<section class="home-service">
+  <div class="container">
+    <span class="section-meta">What We Do</span>
+    <h3 class="section-title mb-6">Our Services</h3>
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="home-service__box">
+          <div class="home-service__img"><img src="assets/img/img_02.jpg"></div>
+          <div class="home-service__content">
+            <h4 class="home-service__title">Monitored Internship Program</h4>
+            <p class="home-service__text">Alpha Chaperone promises a unique Internship experience to the clients by providing tailored tasks and systematic monitoring policies in collaboration with...</p>
+            <a routerLink="/internship" class="home-service__btn">
+              <span>Learn More</span>
+              <i class='bx bx-right-arrow-alt'></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="home-service__box">
+          <div class="home-service__img"><img src="assets/img/img_03.jpg"></div>
+          <div class="home-service__content">
+            <h4 class="home-service__title">Proffessional Training Programs</h4>
+            <p class="home-service__text">Alpha Chaperone offers a wide range of training programmes, independently as well as associated with the internship programmes. Interns can customise...</p>
+            <a routerLink="/training" class="home-service__btn">
+              <span>Learn More</span>
+              <i class='bx bx-right-arrow-alt'></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="home-service__box">
+          <div class="home-service__img"><img src="assets/img/img_04.jpg"></div>
+          <div class="home-service__content">
+            <h4 class="home-service__title">Trainer Empanelment Program</h4>
+            <p class="home-service__text">If you are a freelance trainer or a training profession aspirant looking for a platform to establish your professional training career, May be we can help...</p>
+            <a routerLink="/trainer-empanelment" class="home-service__btn">
+              <span>Learn More</span>
+              <i class='bx bx-right-arrow-alt'></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="home-event">
+  <div class="container">
+    <span class="section-meta">Get Involved</span>
+    <h3 class="section-title">Join the Community</h3>
+    <p class="section-text text-light mb-6">It is amazingly easy to join the community of responsible trainers, to always know what’s new<br> and what’s up with Alpha Chaperone, and to grow together with us!</p>
+    <div class="row">
+      <div class="col-lg-7">
+        <div class="event">
+          <div class="event__title">
+            <i class="title-icon"><img src="assets/img/calendar.svg"></i>
+            <div>
+              <h4 class="title-main">Calendar of Events</h4>
+              <span class="title-sub">Register for any of our events</span>
+            </div>
+          </div>
+          <span class="event__empty alert alert-danger" *ngIf="!events || events.length === 0">Currently we don't have any events</span>
+          <div class="event__list" *ngIf="events || events.length > 0">
+            <div class="event__item" *ngFor="let item of events">
+              <div class="event__data">
+                <span>{{item.date}}</span>
+                <span>{{item.title}}</span>
+              </div>
+              <a href="{{item.link}}" class="event__link"><i class='bx bx-right-arrow-alt'></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-5">
+        <div class="event">
+          <div class="event__title">
+            <i class="title-icon"><img src="assets/img/social.svg"></i>
+            <div>
+              <h4 class="title-main">Social Media</h4>
+              <span class="title-sub">Like and follow our pages</span>
+            </div>
+          </div>
+          <ul class="event__social">
+            <li><a href="https://www.facebook.com/alphachaperone" target="_blank"><img src="assets/img/facebook.svg" alt="facebook"></a></li>
+            <li><a href="https://www.instagram.com/alpha_chaperone/" target="_blank"><img src="assets/img/instagram.svg" alt="instagram"></a></li>
+            <li><a href="https://twitter.com/AlphaChaperone?s=20&t=6sARCn7HLREMg7-9MUbfcg" target="_blank"><img src="assets/img/twitter.svg" alt="twitter"></a></li>
+            <li><a href="https://www.linkedin.com/company/alpha-chaperone" target="_blank"><img src="assets/img/linkedin.svg" alt="linkedin"></a></li>
+            <li><a href="https://www.youtube.com/channel/UCf1oxZopPPQZo-jwLfQvTZw" target="_blank"><img src="assets/img/youtube.svg" alt="email"></a></li>
+          </ul>
+          <div class="newsletter">
+            <h4 class="newsletter__title">Signup to our Newsletter</h4>
+            <form class="newsletter__form" [formGroup]="subscribeForm" (ngSubmit)="subscribeNow()">
+              <div class="form-group">
+                <input type="email" id="email" placeholder="Type your email..." formControlName="email">
+                <button type="submit" [disabled]="!subscribeForm.valid">Subscribe</button>
+                <div class="form-alert" [ngClass]="{ 'show': showMsg==true }">Thank you for your Subscription</div>
+              </div>
+              <div class="form-group checkbox-cmn">
+                <input type="checkbox" id="terms" formControlName="terms">
+                <label for="terms">I read and accept <a href="#">Privacy Policy</a></label>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="home-associate">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3 text-center">
+        <i class="associate-logo"><img src="assets/img/logo_04.svg"></i>
+      </div>
+      <div class="col-lg-3 text-center">
+        <i class="associate-logo"><img src="assets/img/logo_02.svg"></i>
+      </div>
+      <div class="col-lg-3 text-center">
+        <i class="associate-logo"><img src="assets/img/logo_03.svg"></i>
+      </div>
+      <div class="col-lg-3 text-center">
+        <i class="associate-logo"><img src="assets/img/logo_04.svg"></i>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="mockup">
+  <div class="container">
+    <div class="mockup__box">
+      <h3 class="mockup__title">Are you ready to be a part of <br>Alpha Chaperone ?</h3>
+        <a routerLink="/registration" class="mockup__btn"><span>Become a member</span></a>
+    </div>
+  </div>
+</section>

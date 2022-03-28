@@ -1,0 +1,38 @@
+<header class="header">
+  <div class="container">
+    <nav class="navbar">
+      <div class="navbar__col">
+        <a routerLink="/home" class="navbar__brand"><img src="assets/img/logo.png" alt="Alpha Chaperone"></a>
+      </div>
+      <div class="navbar__col">
+        <div class="navbar__mobile" [ngClass]="{ 'show':is_menu }">
+          <ul class="navbar__nav">
+            <li class="navbar__item">
+              <a routerLink="/home" [routerLinkActive]="['active']" class="navbar__link">Home</a>
+            </li>
+            <li class="navbar__item">
+              <a routerLink="/about" [routerLinkActive]="['active']" class="navbar__link">Who We Are</a>
+            </li>
+            <li class="navbar__item dropdown">
+              <a (click)="dropDown()" [ngClass]="{'show':is_show}" class="navbar__link dropdown__toggle">What We Do</a>
+              <ul class="dropdown__list" [ngClass]="{'show':is_show}">
+                <li class="dropdown__item"><a routerLink="/internship" class="dropdown__link">Internship</a></li>
+                <li class="dropdown__item"><a routerLink="/training" class="dropdown__link">Training</a></li>
+                <li class="dropdown__item"><a routerLink="/trainer-empanelment" class="dropdown__link">Trainer Empanelment</a></li>
+              </ul>
+            </li>
+            <li class="navbar__item">
+              <a routerLink="/contact" [routerLinkActive]="['active']" class="navbar__link">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <a routerLink="/registration" class="navbar__btn"><span>Like to be a part?</span></a>
+        <button class="navbar__toggle" (click)="openMenu()" [ngClass]="{ 'show':is_menu }">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </button>
+      </div>
+    </nav>
+  </div>
+</header>
