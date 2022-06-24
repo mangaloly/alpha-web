@@ -78,7 +78,7 @@ export class InternFormComponent implements OnInit {
     this.registered = true;
 
     if(this.internForm.valid) {
-      this.http.post('https://alpha-chaperone-web-default-rtdb.asia-southeast1.firebasedatabase.app/registration/internship.json', this.internForm.value).subscribe((response) => console.log(response));
+      this.http.post('https://admin.alphachaperone.com/api/v3/intern-registration', this.internForm.value).subscribe((response) => console.log(response));
       console.table(this.internForm.value);
       this.internForm.reset();
       this.showMsg = true;

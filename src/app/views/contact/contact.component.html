@@ -14,22 +14,22 @@
           <form class="contact__form" [formGroup]="contactForm" (ngSubmit)="submitContact()">
             <div class="form-group">
               <label for="name">Your Name</label>
-              <input class="form-input" type="text" placeholder="Name..." formControlName="name" [ngClass]="{ 'is-invalid': contactForm.controls['name'].invalid && (contactForm.controls['name'].dirty || contactForm.controls['name'].touched) }">
+              <input class="form-input" name="name" type="text" placeholder="Name..." formControlName="name" [ngClass]="{ 'is-invalid': contactForm.controls['name'].invalid && (contactForm.controls['name'].dirty || contactForm.controls['name'].touched) }">
               <span class="form-error" *ngIf="contactForm.controls['name'].invalid && (contactForm.controls['name'].dirty || contactForm.controls['name'].touched)">Name is required</span>
             </div>
             <div class="form-group">
               <label for="email">Email Address</label>
-              <input class="form-input" type="email" id="email" placeholder="Enter your email address" formControlName="email" [ngClass]="{ 'is-invalid': contactForm.controls['email'].invalid && (contactForm.controls['email'].dirty || contactForm.controls['email'].touched) }">
+              <input class="form-input" name="email" type="email" id="email" placeholder="Enter your email address" formControlName="email" [ngClass]="{ 'is-invalid': contactForm.controls['email'].invalid && (contactForm.controls['email'].dirty || contactForm.controls['email'].touched) }">
               <span class="form-error" *ngIf="contactForm.controls['email'].invalid && (contactForm.controls['email'].dirty || contactForm.controls['email'].touched)">Enter a valid email address</span>
             </div>
             <div class="form-group">
               <label for="phone">Phone Number</label>
-              <input class="form-input" type="tel" id="phone" placeholder="Phone Number" formControlName="phone" [ngClass]="{ 'is-invalid': contactForm.controls['phone'].invalid && (contactForm.controls['phone'].dirty || contactForm.controls['phone'].touched) }">
+              <input class="form-input" name="phone" type="tel" id="phone" placeholder="Phone Number" formControlName="phone" [ngClass]="{ 'is-invalid': contactForm.controls['phone'].invalid && (contactForm.controls['phone'].dirty || contactForm.controls['phone'].touched) }">
               <span class="form-error" *ngIf="contactForm.controls['phone'].invalid && (contactForm.controls['phone'].dirty || contactForm.controls['phone'].touched)">Enter a valid phone number</span>
             </div>
             <div class="form-group">
               <label for="comment">Write your question</label>
-              <textarea class="form-input" placeholder="Type your message" formControlName="comment"></textarea>
+              <textarea class="form-input" name="comment" placeholder="Type your message" formControlName="comment"></textarea>
             </div>
             <div class="form-group checkbox-cmn">
               <input type="checkbox" id="terms" name="terms" formControlName="terms">

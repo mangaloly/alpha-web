@@ -95,7 +95,7 @@ export class TrainingFormComponent implements OnInit {
     this.registered = true;
 
     if(this.trainingForm.valid) {
-      this.http.post('https://alpha-chaperone-web-default-rtdb.asia-southeast1.firebasedatabase.app/registration/training.json', this.trainingForm.value).subscribe((response) => console.log(response));
+      this.http.post('https://admin.alphachaperone.com/api/v3/training-registration', this.trainingForm.value).subscribe((response) => console.log(response));
       console.table(this.trainingForm.value);
       this.trainingForm.reset();
       this.showMsg = true;

@@ -76,7 +76,7 @@ export class EmpanelFormComponent implements OnInit {
     this.registered = true;
 
     if(this.empanelForm.valid) {
-      this.http.post('https://alpha-chaperone-web-default-rtdb.asia-southeast1.firebasedatabase.app/registration/empanelment.json', this.empanelForm.value).subscribe((response) => console.log(response));
+      this.http.post('https://admin.alphachaperone.com/api/v3/empanel-registraion', this.empanelForm.value).subscribe((response) => console.log(response));
       console.table(this.empanelForm.value);
       this.empanelForm.reset();
       this.showMsg = true;

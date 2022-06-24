@@ -9,42 +9,42 @@
               <div class="col-md-6">
                 <div class="form-group">
                   <label>Full Name</label>
-                  <input type="text" class="form-input" placeholder="Full Name" formControlName="fname" [ngClass]="{ 'is-invalid': internForm.controls['fname'].invalid && (internForm.controls['fname'].dirty || internForm.controls['fname'].touched) }">
+                  <input type="text" name="fname" id="fname" class="form-input" placeholder="Full Name" formControlName="fname" [ngClass]="{ 'is-invalid': internForm.controls['fname'].invalid && (internForm.controls['fname'].dirty || internForm.controls['fname'].touched) }">
                   <span class="form-error" *ngIf="internForm.controls['fname'].invalid && (internForm.controls['fname'].dirty || internForm.controls['fname'].touched)">Name is required</span>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
                   <label for="email">Email Address</label>
-                  <input type="email" id="email" class="form-input" placeholder="Email Address" formControlName="email" [ngClass]="{ 'is-invalid': internForm.controls['email'].invalid && (internForm.controls['email'].dirty || internForm.controls['email'].touched) }">
+                  <input type="email" name="email" id="email" class="form-input" placeholder="Email Address" formControlName="email" [ngClass]="{ 'is-invalid': internForm.controls['email'].invalid && (internForm.controls['email'].dirty || internForm.controls['email'].touched) }">
                   <span class="form-error" *ngIf="internForm.controls['email'].invalid && (internForm.controls['email'].dirty || internForm.controls['email'].touched)">Enter a valid email address</span>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
                   <label for="phone">Phone Number</label>
-                  <input type="tel" id="phone" class="form-input" placeholder="Phone Number" formControlName="phone" [ngClass]="{ 'is-invalid': internForm.controls['phone'].invalid && (internForm.controls['phone'].dirty || internForm.controls['phone'].touched) }">
+                  <input type="tel" name="phone" id="phone" class="form-input" placeholder="Phone Number" formControlName="phone" [ngClass]="{ 'is-invalid': internForm.controls['phone'].invalid && (internForm.controls['phone'].dirty || internForm.controls['phone'].touched) }">
                   <span class="form-error" *ngIf="internForm.controls['phone'].invalid && (internForm.controls['phone'].dirty || internForm.controls['phone'].touched)">Enter a valid phone number</span>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
                   <label for="institute">Educational Institution</label>
-                  <input type="text" class="form-input" placeholder="Educational Institution" formControlName="institute" [ngClass]="{ 'is-invalid': internForm.controls['institute'].invalid && (internForm.controls['institute'].dirty || internForm.controls['institute'].touched) }">
+                  <input type="text" name="institute" id="institute" class="form-input" placeholder="Educational Institution" formControlName="institute" [ngClass]="{ 'is-invalid': internForm.controls['institute'].invalid && (internForm.controls['institute'].dirty || internForm.controls['institute'].touched) }">
                   <span class="form-error" *ngIf="internForm.controls['institute'].invalid && (internForm.controls['institute'].dirty || internForm.controls['institute'].touched)">*Required</span>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
                   <label for="course">Course</label>
-                  <input type="text" class="form-input" placeholder="Course" formControlName="course" [ngClass]="{ 'is-invalid': internForm.controls['course'].invalid && (internForm.controls['course'].dirty || internForm.controls['course'].touched) }">
+                  <input type="text" name="course" id="course" class="form-input" placeholder="Course" formControlName="course" [ngClass]="{ 'is-invalid': internForm.controls['course'].invalid && (internForm.controls['course'].dirty || internForm.controls['course'].touched) }">
                   <span class="form-error" *ngIf="internForm.controls['course'].invalid && (internForm.controls['course'].dirty || internForm.controls['course'].touched)">*Required</span>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
                   <label>With us any internship earlier?</label>
-                  <select class="form-select" formControlName="earlier" [(ngModel)]="selectedExp" [ngClass]="{ 'is-invalid': internForm.controls['earlier'].invalid && (internForm.controls['earlier'].dirty || internForm.controls['earlier'].touched) }">
+                  <select class="form-select" name="earlier" id="earlier" formControlName="earlier" [(ngModel)]="selectedExp" [ngClass]="{ 'is-invalid': internForm.controls['earlier'].invalid && (internForm.controls['earlier'].dirty || internForm.controls['earlier'].touched) }">
                     <option disabled selected value="undefined">Choose an option</option>
                     <option *ngFor="let option of earlier; let x = index;" [value]="option.id">{{ option.name }}</option>
                   </select>
@@ -56,7 +56,7 @@
               <div class="col-md-12">
                 <div class="form-group">
                   <label>Where did you get to know about us?</label>
-                  <select class="form-select" formControlName="known" [(ngModel)]="selectedKnown" [ngClass]="{ 'is-invalid': internForm.controls['known'].invalid && (internForm.controls['known'].dirty || internForm.controls['known'].touched) }">
+                  <select class="form-select" name="known" id="known" formControlName="known" [(ngModel)]="selectedKnown" [ngClass]="{ 'is-invalid': internForm.controls['known'].invalid && (internForm.controls['known'].dirty || internForm.controls['known'].touched) }">
                     <option disabled selected value="undefined">Choose an option</option>
                     <option *ngFor="let option of known; let x = index;" [value]="option.id">{{ option.name }}</option>
                   </select>

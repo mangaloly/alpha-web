@@ -98,7 +98,7 @@
               <span class="title-sub">Register for any of our events</span>
             </div>
           </div>
-          <span class="event__empty alert alert-danger" *ngIf="!events || events.length === 0">Currently we don't have any events</span>
+          <span class="event__empty" *ngIf="!events || events.length === 0">Currently we don't have any events</span>
           <div class="event__list" *ngIf="events || events.length > 0">
             <div class="event__item" *ngFor="let item of events">
               <div class="event__data">
@@ -115,30 +115,17 @@
           <div class="event__title">
             <i class="title-icon"><img src="assets/img/social.svg"></i>
             <div>
-              <h4 class="title-main">Social Media</h4>
-              <span class="title-sub">Like and follow our pages</span>
+              <h4 class="title-main">Dedicated App</h4>
+              <span class="title-sub">Tailored for your needs</span>
             </div>
           </div>
-          <ul class="event__social">
-            <li><a href="https://www.facebook.com/alphachaperone" target="_blank"><img src="assets/img/facebook.svg" alt="facebook"></a></li>
-            <li><a href="https://www.instagram.com/alpha_chaperone/" target="_blank"><img src="assets/img/instagram.svg" alt="instagram"></a></li>
-            <li><a href="https://twitter.com/AlphaChaperone?s=20&t=6sARCn7HLREMg7-9MUbfcg" target="_blank"><img src="assets/img/twitter.svg" alt="twitter"></a></li>
-            <li><a href="https://www.linkedin.com/company/alpha-chaperone" target="_blank"><img src="assets/img/linkedin.svg" alt="linkedin"></a></li>
-            <li><a href="https://www.youtube.com/channel/UCf1oxZopPPQZo-jwLfQvTZw" target="_blank"><img src="assets/img/youtube.svg" alt="email"></a></li>
-          </ul>
-          <div class="newsletter">
-            <h4 class="newsletter__title">Signup to our Newsletter</h4>
-            <form class="newsletter__form" [formGroup]="subscribeForm" (ngSubmit)="subscribeNow()">
-              <div class="form-group">
-                <input type="email" id="email" placeholder="Type your email..." formControlName="email">
-                <button type="submit" [disabled]="!subscribeForm.valid">Subscribe</button>
-                <div class="form-alert" [ngClass]="{ 'show': showMsg==true }">Thank you for your Subscription</div>
-              </div>
-              <div class="form-group checkbox-cmn">
-                <input type="checkbox" id="terms" formControlName="terms">
-                <label for="terms">I read and accept <a href="#">Privacy Policy</a></label>
-              </div>
-            </form>
+          <div class="download">
+            <a href="assets/alpha-chaperone.apk" class="download__btn">
+              <i class='bx bxs-cloud-download'></i>
+            </a>
+            <i class="download__img">
+              <img src="assets/img/mockup.png">
+            </i>
           </div>
         </div>
       </div>

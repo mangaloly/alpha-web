@@ -58,7 +58,7 @@ export class ContactComponent implements OnInit {
     this.submitted = true;
 
     if(this.contactForm.valid) {
-      this.http.post('https://alpha-chaperone-web-default-rtdb.asia-southeast1.firebasedatabase.app/contact.json', this.contactForm.value).subscribe((response) => console.log(response));
+      this.http.post('https://admin.alphachaperone.com/api/v3/add-contact', this.contactForm.value).subscribe((response) => console.log(response));
       console.table(this.contactForm.value);
       this.contactForm.reset();
       this.showMsg = true;

@@ -7,7 +7,7 @@ import { map } from 'rxjs';
 })
 export class InternService {
 
-  private mailApi = 'https://mailthis.to/hellomangaloly@gmail.com';
+  private mailApi = 'https://admin.alphachaperone.com/api/v3/intern-registration';
 
   constructor(private http: HttpClient) { }
 

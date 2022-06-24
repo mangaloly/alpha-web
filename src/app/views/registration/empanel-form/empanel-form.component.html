@@ -9,28 +9,28 @@
               <div class="col-md-6">
                 <div class="form-group">
                   <label for="name">Full Name</label>
-                  <input type="text" id="name" class="form-input" placeholder="Full Name" formControlName="name" [ngClass]="{ 'is-invalid': empanelForm.controls['name'].invalid && (empanelForm.controls['name'].dirty || empanelForm.controls['name'].touched) }">
+                  <input type="text" id="name" name="name" class="form-input" placeholder="Full Name" formControlName="name" [ngClass]="{ 'is-invalid': empanelForm.controls['name'].invalid && (empanelForm.controls['name'].dirty || empanelForm.controls['name'].touched) }">
                   <span class="form-error" *ngIf="empanelForm.controls['name'].invalid && (empanelForm.controls['name'].dirty || empanelForm.controls['name'].touched)">Name is required</span>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
                   <label for="email">Email Address</label>
-                  <input type="email" id="email" class="form-input" placeholder="Email Address" formControlName="email" [ngClass]="{ 'is-invalid': empanelForm.controls['email'].invalid && (empanelForm.controls['email'].dirty || empanelForm.controls['email'].touched) }">
+                  <input type="email" name="email" id="email" class="form-input" placeholder="Email Address" formControlName="email" [ngClass]="{ 'is-invalid': empanelForm.controls['email'].invalid && (empanelForm.controls['email'].dirty || empanelForm.controls['email'].touched) }">
                   <span class="form-error" *ngIf="empanelForm.controls['email'].invalid && (empanelForm.controls['email'].dirty || empanelForm.controls['email'].touched)">Enter a valid email address</span>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
                   <label for="phone">Phone Number</label>
-                  <input type="tel" id="phone" class="form-input" placeholder="Phone Number" formControlName="phone" [ngClass]="{ 'is-invalid': empanelForm.controls['phone'].invalid && (empanelForm.controls['phone'].dirty || empanelForm.controls['phone'].touched) }">
+                  <input type="tel" name="phone" id="phone" class="form-input" placeholder="Phone Number" formControlName="phone" [ngClass]="{ 'is-invalid': empanelForm.controls['phone'].invalid && (empanelForm.controls['phone'].dirty || empanelForm.controls['phone'].touched) }">
                   <span class="form-error" *ngIf="empanelForm.controls['phone'].invalid && (empanelForm.controls['phone'].dirty || empanelForm.controls['phone'].touched)">Enter a valid phone number</span>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
                   <label for="status">Current Status</label>
-                  <select id="status" class="form-select" formControlName="status" [(ngModel)]="selectedStatus" [ngClass]="{ 'is-invalid': empanelForm.controls['status'].invalid && (empanelForm.controls['status'].dirty || empanelForm.controls['status'].touched) }">
+                  <select name="status" id="status" class="form-select" formControlName="status" [(ngModel)]="selectedStatus" [ngClass]="{ 'is-invalid': empanelForm.controls['status'].invalid && (empanelForm.controls['status'].dirty || empanelForm.controls['status'].touched) }">
                     <option disabled selected value="undefined">Choose Current Status</option>
                     <option *ngFor="let current of status; let x = index;" [value]="current.id">{{ current.name }}</option>
                   </select>
@@ -40,7 +40,7 @@
               <div class="col-md-6">
                 <div class="form-group">
                   <label for="attended">Have you attended training workshops?</label>
-                  <select id="attended" class="form-select" formControlName="attended" [(ngModel)]="selectedAttend" [ngClass]="{ 'is-invalid': empanelForm.controls['attended'].invalid && (empanelForm.controls['attended'].dirty || empanelForm.controls['attended'].touched) }">
+                  <select name="attended" id="attended" class="form-select" formControlName="attended" [(ngModel)]="selectedAttend" [ngClass]="{ 'is-invalid': empanelForm.controls['attended'].invalid && (empanelForm.controls['attended'].dirty || empanelForm.controls['attended'].touched) }">
                     <option disabled selected value="undefined">Choose an option</option>
                     <option *ngFor="let answer of attended; let x = index;" [value]="answer.id">{{ answer.name }}</option>
                   </select>
@@ -50,7 +50,7 @@
               <div class="col-md-6">
                 <div class="form-group">
                   <label for="experience">Any previous training experience?</label>
-                  <select id="experience" class="form-select" formControlName="experience" [(ngModel)]="selectedExp" [ngClass]="{ 'is-invalid': empanelForm.controls['experience'].invalid && (empanelForm.controls['experience'].dirty || empanelForm.controls['experience'].touched) }">
+                  <select name="experience" id="experience" class="form-select" formControlName="experience" [(ngModel)]="selectedExp" [ngClass]="{ 'is-invalid': empanelForm.controls['experience'].invalid && (empanelForm.controls['experience'].dirty || empanelForm.controls['experience'].touched) }">
                     <option disabled selected value="undefined">Choose an option</option>
                     <option *ngFor="let chose of experience; let x = index;" [value]="chose.id">{{ chose.name }}</option>
                   </select>
@@ -62,7 +62,7 @@
               <div class="col-md-12">
                 <div class="form-group">
                   <label for="years">If yes: How many years?</label>
-                  <input type="text" id="years" class="form-input" placeholder="Years of Experience" formControlName="years" [ngClass]="{ 'is-invalid': empanelForm.controls['years'].invalid && (empanelForm.controls['years'].dirty || empanelForm.controls['years'].touched) }">
+                  <input type="text" name="years" id="years" class="form-input" placeholder="Years of Experience" formControlName="years" [ngClass]="{ 'is-invalid': empanelForm.controls['years'].invalid && (empanelForm.controls['years'].dirty || empanelForm.controls['years'].touched) }">
                   <span class="form-error" *ngIf="empanelForm.controls['years'].invalid && (empanelForm.controls['years'].dirty || empanelForm.controls['years'].touched)">*Required</span>
                 </div>
               </div>
