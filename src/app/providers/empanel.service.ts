@@ -7,7 +7,7 @@ import { map } from 'rxjs';
 })
 export class EmpanelService {
 
-  private mailApi = 'https://admin.alphachaperone.com/api/v3/empanel-registraion';
+  private mailApi = 'https://admin.alphachaperone.com/api/v3/empanel-registration';
 
   constructor(private http: HttpClient) { }
 

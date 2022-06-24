@@ -72,25 +72,6 @@ export class TrainingFormComponent implements OnInit {
 
   get avf() { return this.trainingForm.controls; }
 
-  // registerTraining() {
-  //   this.registered = true;
-  //   this.training.PostTraining(this.trainingForm).subscribe(
-  //     response => {
-  //       location.href = 'https://mailthis.to/confirm';
-  //     }, error => {
-
-  //   });
-
-  //   if(this.trainingForm.invalid) {
-  //     this.showError = true;
-  //   } else {
-  //     console.log(JSON.stringify(this.trainingForm.value));
-  //     console.table(this.trainingForm.value);
-  //     this.trainingForm.reset();
-  //     this.showMsg = true;
-  //   }
-  // }
-
   registerTraining() {
     this.registered = true;
 

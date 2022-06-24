@@ -55,25 +55,6 @@ export class InternFormComponent implements OnInit {
 
   get avf() { return this.internForm.controls; }
 
-  // registerIntern() {
-  //   this.registered = true;
-  //   this.intern.PostIntern(this.internForm).subscribe(
-  //     response => {
-  //       location.href = 'https://mailthis.to/confirm';
-  //     }, error => {
-
-  //   });
-
-  //   if(this.internForm.invalid) {
-  //     this.showError = true;
-  //   } else {
-  //     console.log(JSON.stringify(this.internForm.value));
-  //     console.table(this.internForm.value);
-  //     this.internForm.reset();
-  //     this.showMsg = true;
-  //   }
-  // }
-
   registerIntern() {
     this.registered = true;
 

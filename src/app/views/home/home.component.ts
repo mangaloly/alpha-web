@@ -50,27 +50,6 @@ export class HomeComponent implements OnInit {
 
   get avf() { return this.subscribeForm.controls; }
 
-  // subscribeNow() {
-  //   this.subscribed = true;
-  //   this.subscribe.PostSubscribe(this.subscribeForm).subscribe(
-  //     response => {
-  //       location.href = 'https://mailthis.to/confirm';
-  //     }, error => {
-
-  //   });
-
-  //   if(this.subscribeForm.invalid) {
-  //   } else {
-  //     console.log(JSON.stringify(this.subscribeForm.value));
-  //     console.table(this.subscribeForm.value);
-  //     this.subscribeForm.reset();
-  //     this.showMsg = true;
-  //     setTimeout(() => {
-  //       this.showMsg = false;
-  //     }, 3000);
-  //   }
-  // }
-
   subscribeNow() {
     this.subscribed = true;
 

@@ -7,7 +7,7 @@ import { map } from 'rxjs';
 })
 export class SubscribeService {
 
-  private mailApi = 'https://mailthis.to/hellomangaloly@gmail.com';
+  private mailApi = '';
 
   constructor(private http: HttpClient) { }
 

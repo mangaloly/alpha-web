@@ -26,33 +26,11 @@ export class ContactComponent implements OnInit {
       email: new FormControl('', [Validators.required, Validators.pattern(this.validator.emailPattern())]),
       phone: new FormControl('', [Validators.required, Validators.pattern(this.numpattern),  Validators.minLength(10)]),
       comment: new FormControl(''),
-      terms: new FormControl(false, Validators.requiredTrue)
+      // policy_accept: new FormControl(false, Validators.requiredTrue)
     });
   }
 
   get avf() { return this.contactForm.controls; }
-
-  // submitContact() {
-  //   this.submitted = true;
-  //   this.contact.PostMessage(this.contactForm).subscribe(
-  //     response => {
-  //       location.href = 'https://mailthis.to/confirm';
-  //     }, error => {
-
-  //   });
-
-  //   if(this.contactForm.invalid) {
-  //     this.showError = true;
-  //   } else {
-  //     console.log(JSON.stringify(this.contactForm.value));
-  //     console.table(this.contactForm.value);
-  //     this.contactForm.reset();
-  //     this.showMsg = true;
-  //     setTimeout(() => {
-  //       this.showMsg = false;
-  //     }, 3000);
-  //   }
-  // }
 
   submitContact() {
     this.submitted = true;

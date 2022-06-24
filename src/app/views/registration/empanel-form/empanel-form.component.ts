@@ -53,30 +53,11 @@ export class EmpanelFormComponent implements OnInit {
 
   get avf() { return this.empanelForm.controls; }
 
-  // registerTrainer() {
-  //   this.registered = true;
-  //   this.trainer.RegisterTrainer(this.empanelForm).subscribe(
-  //     response => {
-  //       location.href = 'https://mailthis.to/confirm';
-  //     }, error => {
-
-  //   });
-
-  //   if(this.empanelForm.invalid) {
-  //     this.showError = true;
-  //   } else {
-  //     console.log(JSON.stringify(this.empanelForm.value));
-  //     console.table(this.empanelForm.value);
-  //     this.empanelForm.reset();
-  //     this.showMsg = true;
-  //   }
-  // }
-
   registerTrainer() {
     this.registered = true;
 
     if(this.empanelForm.valid) {
-      this.http.post('https://admin.alphachaperone.com/api/v3/empanel-registraion', this.empanelForm.value).subscribe((response) => console.log(response));
+      this.http.post('https://admin.alphachaperone.com/api/v3/empanel-registration', this.empanelForm.value).subscribe((response) => console.log(response));
       console.table(this.empanelForm.value);
       this.empanelForm.reset();
       this.showMsg = true;
